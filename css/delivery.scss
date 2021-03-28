@@ -1,0 +1,78 @@
+@import "_variables";
+@import "_mixins";
+@import "_buttons";
+body {
+    @include responsive(desktop) {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        .delivery_main {
+            .container {
+                margin-top: calc(25vh - 215.11px);
+            }
+        }
+    }
+}
+.delivery_main {
+    .container {
+        h2 {
+            margin-bottom: 80px;
+            position: relative;
+
+            &:before {
+                @include pseudo-bg();
+                width: 150px;
+                height: 90px;
+                left: calc(50% - 75px);
+                top: -90px;
+                background: url(../img/delivery/delivery_01.png) no-repeat center / cover;
+            }
+        }
+
+        .flex_row {
+            @include responsive(tablet) {
+                display: flex;
+            }
+
+            .column {
+                @include responsive(tablet) {
+                    display: flex;
+                    align-items: center;
+                    flex-direction: column;
+                }
+                margin-bottom: $mg-l;
+                width: 100%;
+                .app_icons {
+                    display: flex;
+                    justify-content: space-around;
+                    margin-bottom: $mg-l;
+                    width: 100%;
+                    img {
+                        width: 100%;
+                    }
+                }
+
+                .locations {
+                    @include responsive(tablet) {
+                        width: 80%;
+                    }
+                    display: flex;
+
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    overflow: hidden;
+                    span {
+                        float: left;
+                        display: block;
+                        color: $main;
+                        padding: 5px 10px;
+                        border: 1px solid;
+                        border-radius: 20px;
+                        margin: 0 $mg_s $mg_s 0;
+                    }
+                }
+            }
+        }
+    }
+}

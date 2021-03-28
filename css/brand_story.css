@@ -1,0 +1,92 @@
+.begins .container div {
+  overflow: hidden;
+}
+.begins .container div p {
+  padding: 30px 0;
+  line-height: 1.5;
+}
+.begins .container div p:nth-of-type(2) {
+  font-size: 1.2rem;
+  color: #494949;
+}
+@media screen and (min-width: 768px) {
+  .begins .container div img {
+    float: right;
+    margin-left: 30px;
+  }
+}
+
+.brnad_ideal .container h3 {
+  position: relative;
+}
+.brnad_ideal .container h3:after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  border-bottom: 3px solid #6eb43f;
+  left: calc(50% - 50px);
+  width: 100px;
+  top: 20px;
+}
+.brnad_ideal .container .column {
+  margin-top: 50px;
+}
+@media screen and (min-width: 768px) {
+  .brnad_ideal .container .column {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+.brnad_ideal .container .column div {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.brnad_ideal .container .column div img {
+  order: 2;
+  margin: 10px 0;
+}
+.brnad_ideal .container .column div span:nth-of-type(1) {
+  order: 1;
+}
+.brnad_ideal .container .column div span:nth-of-type(1):before {
+  content: "# ";
+}
+.brnad_ideal .container .column div span:nth-of-type(2) {
+  order: 3;
+}
+@media screen and (min-width: 768px) {
+  .brnad_ideal .container .column div {
+    width: 30%;
+    flex-direction: column;
+  }
+  .brnad_ideal .container .column div img {
+    order: 2;
+  }
+}
+
+.stand_for .container {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #f5f5f5;
+  position: relative;
+}
+.stand_for .container:after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  border: 1px solid;
+  background: url(../img/menu_burgers.jpg) no-repeat center/cover;
+}
+
+/*# sourceMappingURL=brand_story.css.map */

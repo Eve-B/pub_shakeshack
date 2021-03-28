@@ -1,0 +1,40 @@
+@font-face {
+    font-family: Galaxi;
+    src:url(../fonts/GalaxieCassiopeiaBasic-Bold.woff) format("woff"),
+        url(../fonts/GalaxieCassiopeiaBasic-Bold.ttf) format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: "korLight";
+    src:url("../fonts/notokr-light.woff2") format("woff2"),
+        url("../fonts/notokr-light.woff") format("woff"),
+        url("../fonts/notokr-light.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "korReg";
+    src:url("../fonts/notokr-regular.woff2") format("woff2"), url("../fonts/notokr-regular.woff") format("woff"),
+        url("../fonts/notokr-regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "korMed";
+    src:url("../fonts/notokr-medium.woff2") format("woff2"), url("../fonts/notokr-medium.woff") format("woff"),
+        url("../fonts/notokr-medium.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "korBold";
+    src:url("../fonts/notokr-bold.woff2") format("woff2"),
+        url("../fonts/notokr-bold.woff") format("woff"),
+        url("../fonts/notokr-bold.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}

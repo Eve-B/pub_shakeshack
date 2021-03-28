@@ -1,0 +1,99 @@
+@import "_variables";
+@import "_mixins";
+
+header {
+    font-family: korBold;
+    font-size: $button;
+    color: $main;
+    position: fixed;
+    z-index: 50;
+    top: 0;
+    width: 100%;
+
+    h1 {
+        a {
+            margin: 0 auto;
+            padding: 10px 0;
+            width: 100%;
+            max-width: 170px;
+            img {
+                width: 100%;
+            }
+            @include responsive(tablet) {
+                padding: 15px 0;
+                max-width: 228px;
+            }
+        }
+        border-bottom: 1px solid $main;
+        background-color: #fff;
+    }
+    nav {
+        background-color: #fff;
+        border-bottom: 1px solid $main;
+        @include responsive(tablet) {
+            border-bottom: none;
+        }
+    }
+
+    .container {
+        padding: 0;
+        .menu-trigger {
+            padding: 5px 0;
+            @include responsive(tablet) {
+                display: none;
+            }
+
+            &.active {
+                transform: rotate(180deg);
+                transition: transform 0.5s;
+            }
+            transition: transform 0.5s;
+        }
+
+        ul {
+            position: absolute;
+            background-color: #fff;
+            width: 100%;
+            top: $header_m;
+            left: 0;
+            height: 0;
+            overflow: hidden;
+
+            @include responsive(tablet) {
+                top: $h1_d;
+                height: auto;
+                font-size: $body;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                border-bottom: 1px solid $main;
+            }
+
+            li {
+                a {
+                    padding: 15px 0;
+                    width: 100%;
+                }
+
+                a.hover {
+                    background-color: $main;
+                    color: #fff;
+                }
+
+                @include responsive(tablet) {
+                    width: 25%;
+                    a {
+                        padding: 10px 0;
+                    }
+                }
+            }
+
+            &.active {
+                border-bottom: 1px solid $black;
+                height: 56px * 4; // li*4개
+                transition: height 0.5s;
+            }
+            transition: height 0.5s;
+        }
+    }
+}

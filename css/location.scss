@@ -1,0 +1,124 @@
+@import "_variables";
+@import "_mixins";
+@import "_buttons";
+
+body {
+    color: $main;
+}
+
+.store_main {
+    .container {
+        .location-selector {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            input {
+                @include input-style-reset();
+
+                width: 32%;
+                padding: 5px 0;
+                margin-bottom: $mg_reg;
+                display: block;
+
+                background-color: #fff;
+                border: 5px double $main;
+                color: inherit;
+                border-radius: 10px;
+                &.hover {
+                    color: $white;
+                    background: $main;
+                }
+                @include responsive(tablet) {
+                    width: 24%;
+                }
+                @include responsive(tablet) {
+                    width: 16%;
+                }
+            }
+        }
+    }
+}
+
+.deco-bg-box {
+    width: 100%;
+    margin: 30px 0;
+    h2 {
+        display: none;
+    }
+    img {
+        width: 100%;
+    }
+}
+
+.selected_location {
+    @include responsive(tablet) {
+        display: flex;
+        justify-content: space-between;
+        .column {
+            width: 48%;
+        }
+    }
+}
+/////////////////////
+.location-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    h3 {
+        margin: 0 0 $mg-reg;
+        font-size: $h3;
+
+        &:nth-of-type(1) {
+            &:after {
+                content: "＿";
+                display: block;
+            }
+        }
+
+        &:nth-of-type(2) {
+            &:before {
+                content: "/";
+                font-family: "korLight";
+                display: block;
+                margin: $mg_l 0;
+            }
+            &:after {
+                content: "＿";
+                display: block;
+            }
+        }
+
+        span {
+            margin-left: $mg_s;
+        }
+    }
+
+    .location .about_store {
+        margin-bottom: $mg-reg;
+    }
+    dl {
+        dt {
+            font-family: "korBold";
+        }
+
+        dd {
+            margin-bottom: $mg-reg;
+        }
+    }
+}
+
+.container .container {
+    padding: 20px;
+}
+
+///////////////
+.map-box {
+    width: 100%;
+    .map {
+        height: 400px;
+        width: 100%;
+    }
+}
+
+/////////////////////

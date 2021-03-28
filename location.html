@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta name="format-detection" content="telephone=no" />
+
+      <title>//백승원//SHAKE SHACK</title>
+      <link rel="shortcut icon" href="img/favicon.ico" />
+      <link rel="stylesheet" href="css/reset.css" />
+      <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css" />
+      <link rel="stylesheet" href="css/style.css" />
+      <link rel="stylesheet" href="css/location.css" />
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+   </head>
+
+   <body>
+      <header>
+         <h1>
+            <a href="/works/shakeshack/" class="logo"><img src="img/ss_logo.png" alt="쉐이크쉑 로고 이미지" /></a>
+         </h1>
+         <nav class="gnb">
+            <div class="container">
+               <a href="javascript:void(0)" class="menu-trigger">▼</a>
+               <ul>
+                  <li><a href="brand_story.html">BRAND STORY</a></li>
+                  <li><a href="menu.html">FOOD & DRINK</a></li>
+                  <li><a href="location.html">LOCATION</a></li>
+                  <li><a href="delivery.html">DELIVERY</a></li>
+               </ul>
+            </div>
+         </nav>
+      </header>
+
+      <div class="main store_main">
+         <div class="container">
+            <section class="locations">
+               <h2>Store Location</h2>
+               <div class="location-selector">
+                  <input type="button" value="Jonggak" />
+                  <input type="button" value="CentralCity" />
+                  <input type="button" value="IParkmall" />
+                  <input type="button" value="AK Plaza" />
+                  <input type="button" value="Seomyeon" />
+                  <input type="button" value="Chengdam" />
+                  <input type="button" value="Gangnam" />
+                  <input type="button" value="Starfield" />
+                  <input type="button" value="Doota" />
+                  <input type="button" value="Icheon Airport" />
+                  <input type="button" value="Times Square" />
+                  <input type="button" value="Songdo" />
+               </div>
+            </section>
+            <!-- section.map -->
+
+            <section class="deco-bg-box">
+               <h2>store front view</h2>
+               <img src="img/location.jpg" alt="" />
+            </section>
+            <!-- section.deco-bg-box -->
+
+            <section class="selected_location">
+               <div class="column location-info">
+                  <h3 class="store_name">Jonggak<span>종각</span></h3>
+                  <span class="about_store">전통과 현대가 공존하는 매력적인 장소, 종각에 쉐이크쉑이 찾아갑니다. 서울의 중심에 새로이 자리잡을 커뮤니티 게더링 플레이스, 종각점의 멋과 맛을 느껴보세요!</span>
+                  <h3>location<span>위치안내</span></h3>
+                  <dl>
+                     <dt>영업시간</dt>
+                     <dd class="opening_hours">10:30 ~ 22:30</dd>
+                     <dt>매장주소</dt>
+                     <dd class="address">
+                        서울특별시 종로구 청진동 종로 33 그랑서울 1층
+                     </dd>
+                     <dt>TEL</dt>
+                     <dd class="tel">02-2158-7575</dd>
+                  </dl>
+               </div>
+               <div class="column map-box">
+                  <div id="map" class="map"></div>
+               </div>
+            </section>
+         </div>
+         <!-- .container -->
+      </div>
+      <!-- store_main -->
+
+      <footer>
+         <div class="container">
+            <div class="column">
+               <img src="img/ss_logo_footer.png" alt="쉐이크쉑 로고" />
+               <span>2004-2016 SHAKE SHACK. ALL RIGHTS RESERVED.</span>
+               <span>SOME INFORMATION ON THIS SITE MAY VARY SLIGHTLY BY LOCATION AND IN STADIUMS, EVENT VENUES AND INTERNATIONAL SHACKS.</span>
+               <a href="javascript:void(0)">영상정보처리기기운영·관리방침</a>
+            </div>
+            <div class="column footer-nav">
+               <div>
+                  <span>FOR YOU </span>
+                  <ul>
+                     <li><a href="javascript:void(0)">고객센터</a></li>
+                     <li><a href="javascript:void(0)">윤리신고센터</a></li>
+                     <li><a href="javascript:void(0)">SPC 홈페이지</a></li>
+                  </ul>
+               </div>
+               <div>
+                  <span>SHAKE SHACK</span>
+                  <ul>
+                     <li><a href="javascript:void(0)">채용안내</a></li>
+                     <li><a href="javascript:void(0)">매장안내</a></li>
+                  </ul>
+               </div>
+               <div>
+                  <span>SOCIAL</span>
+                  <ul>
+                     <li><a href="javascript:void(0)">인스타그램</a></li>
+                     <li><a href="javascript:void(0)">네이버 포스트</a></li>
+                     <li><a href="javascript:void(0)">유튜브</a></li>
+                     <li><a href="javascript:void(0)">페이스북</a></li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+         <!-- container -->
+      </footer>
+      <script src="js/index.js"></script>
+      <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDT7sSTMO5sgyqu_1l0KuaIK_QAyv0U44c&callback=initMap"></script>
+      <script src="js/store.js"></script>
+   </body>
+</html>

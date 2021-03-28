@@ -1,0 +1,91 @@
+@import "_variables";
+@import "_mixins";
+
+/* footer */
+footer {
+   font-family: "korLight";
+   font-size: $footer;
+   background-color: $black;
+   color: $white;
+   .container {
+      padding: $footer_pd;
+      display: flex;
+      flex-direction: column-reverse;
+
+      @include responsive(desktop) {
+         margin: 0 auto;
+         max-width: 1200px;
+         display: flex;
+         flex-direction: row;
+         justify-content: space-between;
+      }
+      .column {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         justify-content: space-between;
+         margin-bottom: $mg_l;
+
+         @include responsive(desktop) {
+            &:first-child {
+               width: 30%;
+            }
+
+            &:last-child {
+               width: 60%;
+            }
+         }
+
+         & > a {
+            text-decoration: underline;
+         }
+
+         a:hover {
+            text-decoration: underline;
+         }
+
+         span {
+            /* ie 11 */
+            width: 100%;
+            margin-bottom: $mg_s;
+            display: block;
+         }
+
+         &.footer-nav {
+            ul {
+               width: 100%;
+               display: flex;
+               margin-bottom: $mg_l;
+
+               @include responsive(tablet) {
+                  margin-bottom: 0;
+               }
+               li {
+                  margin-right: $mg_reg;
+                  &:last-child {
+                     margin-right: 0;
+                  }
+               }
+            }
+
+            div:last-child ul {
+               margin-bottom: 0;
+            }
+            @include responsive(tablet) {
+               flex-direction: row;
+               & > div {
+                  margin-right: $mg-reg;
+                  &:last-child {
+                     margin-right: 0;
+                  }
+               }
+            }
+
+            span {
+               font-size: 1.4rem;
+               font-family: korMed;
+            }
+         }
+      }
+   }
+}

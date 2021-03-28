@@ -1,0 +1,37 @@
+// font-size
+$root: 10px;
+$body: 1.4rem;
+$title: 2.8rem;
+$h3: 1.8rem;
+$footer: 1.3rem;
+$button: 2rem;
+
+// color
+$main: #6eb43f;
+$black: #1d1d1d;
+$white: #f5f5f5;
+$green: #377424;
+
+// padding
+$con_pd: 100px 20px;
+$con_pd2-s: 50px 20px;
+$footer_pd: 30px 20px;
+
+// margin
+$mg_s: 10px;
+$mg_reg: 15px;
+$mg_l: 20px;
+
+// media query
+
+// $iphone: 480px;
+$tablet: 768px;
+$desktop: 1200px;
+
+// header ul 배치 관련 값
+$h1_m: 63.36px;
+$h1_d: 86.11px;
+$trigger_m: 37px;
+$ul_d: 39px;
+$header_m: $h1_m + $trigger_m;
+$header_d: $h1_d + $ul_d;

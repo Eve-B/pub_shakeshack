@@ -1,0 +1,78 @@
+@media screen and (min-width: 1200px) {
+  body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  body .delivery_main .container {
+    margin-top: calc(25vh - 215.11px);
+  }
+}
+
+.delivery_main .container h2 {
+  margin-bottom: 80px;
+  position: relative;
+}
+.delivery_main .container h2:before {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 150px;
+  height: 90px;
+  left: calc(50% - 75px);
+  top: -90px;
+  background: url(../img/delivery/delivery_01.png) no-repeat center/cover;
+}
+@media screen and (min-width: 768px) {
+  .delivery_main .container .flex_row {
+    display: flex;
+  }
+}
+.delivery_main .container .flex_row .column {
+  margin-bottom: 20px;
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .delivery_main .container .flex_row .column {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+.delivery_main .container .flex_row .column .app_icons {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+  width: 100%;
+}
+.delivery_main .container .flex_row .column .app_icons img {
+  width: 100%;
+}
+.delivery_main .container .flex_row .column .locations {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  overflow: hidden;
+}
+@media screen and (min-width: 768px) {
+  .delivery_main .container .flex_row .column .locations {
+    width: 80%;
+  }
+}
+.delivery_main .container .flex_row .column .locations span {
+  float: left;
+  display: block;
+  color: #6eb43f;
+  padding: 5px 10px;
+  border: 1px solid;
+  border-radius: 20px;
+  margin: 0 10px 10px 0;
+}
+
+/*# sourceMappingURL=delivery.css.map */

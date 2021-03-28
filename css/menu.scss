@@ -1,0 +1,165 @@
+@import "_variables";
+@import "_mixins";
+@import "_buttons";
+
+.menu_main {
+    // margin-top: 50px;
+    h3 {
+        margin: 0;
+    }
+    p,
+    span {
+        font-size: 14px;
+    }
+
+    //*ie 11에서 .main에 margin-top 구현 안 됨
+    margin-top: 0;
+    section {
+        &:first-child {
+            margin-top: $header_m;
+            @include responsive(desktop) {
+                //* margin-top : header 높이 + ul 높이
+                margin-top: $header_d;
+            }
+        }
+        .title-box {
+            position: relative;
+            background-color: rgba(255, 255, 255, 0.8);
+            &:after {
+                @include pseudo-bg();
+                background: url(../img/menu_burgers.jpg) no-repeat center center / cover;
+                @include responsive(tablet) {
+                    background-size: 100%;
+                }
+            }
+
+            .container {
+                @include menu_container();
+            }
+
+            h2 {
+                position: relative;
+                margin-bottom: 60px;
+
+                &:after {
+                    @include pseudo-bg();
+                    width: 70px;
+                    height: 60px;
+                    background: url(../img/logo_img_black.png) no-repeat center center / 100%;
+                    top: auto;
+                    bottom: -55px;
+                    left: calc(50% - 35px);
+                    z-index: 5;
+                }
+            }
+        }
+
+        .menu-list {
+            .container {
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: column;
+
+                @include responsive(tablet) {
+                    flex-direction: row;
+                }
+
+                @include menu_container();
+
+                .item {
+                    overflow: hidden;
+                    border: 1px solid $main;
+                    border-radius: 10px;
+                    display: flex;
+                    margin-bottom: $mg_l;
+
+                    @include responsive(tablet) {
+                        width: calc(50% - 10px);
+                        margin-right: $mg_l;
+                        &:nth-of-type(2n) {
+                            margin-right: 0;
+                        }
+                        margin-bottom: $mg_l;
+                    }
+
+                    @include responsive(desktop) {
+                        flex-direction: column;
+                        width: calc(25% - 15px);
+                        &:nth-of-type(2n) {
+                            margin-right: $mg_l;
+                        }
+                        &:nth-of-type(4n) {
+                            margin-right: 0;
+                        }
+                    }
+                }
+            }
+
+            img {
+                width: 30%;
+            }
+            @include responsive(desktop) {
+                img {
+                    width: 100%;
+                }
+            }
+            .contents {
+                width: 100%;
+                padding: 5px 10px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+                .price {
+                    display: flex;
+                    span:nth-of-type(2) {
+                        margin-left: $mg_l;
+                    }
+                }
+                h3 + span {
+                    width: 100%;
+                    margin: 5px 0;
+                }
+
+                h3 {
+                    width: 100%;
+                    span {
+                        display: inline-block;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.side_menu-nav {
+    position: fixed;
+    z-index: 30;
+
+    @include responsive(tablet) {
+    }
+    right: 20px;
+    top: calc(50vh - 172px);
+    li {
+        overflow: hidden;
+        $w: 23px;
+        width: $w;
+        height: $w;
+        border-radius: $w;
+        margin-bottom: 25px;
+        position: relative;
+    }
+
+    a {
+        width: 100%;
+        height: 100%;
+        box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.2);
+        border-radius: 23px;
+        background-color: $white;
+        border: 3px solid $green;
+
+        &.hover {
+            border-width: 12px;
+        }
+    }
+}

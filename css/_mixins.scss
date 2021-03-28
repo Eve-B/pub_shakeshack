@@ -1,0 +1,40 @@
+@mixin pseudo-bg {
+   position: absolute;
+   content: "";
+   display: block;
+   width: 100%;
+   height: 100%;
+   top: 0;
+   left: 0;
+   z-index: -1;
+}
+
+@mixin input-style-reset {
+   font-size: $body;
+   -webkit-border-radius: 0; //아이폰 input style 없애기
+   -webkit-appearance: none; //아이폰 input style 없애기
+   cursor: pointer;
+   outline: none;
+}
+
+@mixin responsive($device) {
+   @if $device == "tablet" {
+      @media screen and (min-width: $tablet) {
+         @content;
+      }
+   } @else if $device == "desktop" {
+      @media screen and (min-width: $desktop) {
+         @content;
+      }
+   }
+}
+
+@mixin menu_container() {
+   padding: 30px 20px;
+   @include responsive(tablet) {
+      padding: 50px 20px;
+   }
+   @include responsive(disktop) {
+      padding: 100px 20px;
+   }
+}
