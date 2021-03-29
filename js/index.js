@@ -44,7 +44,7 @@ $(document).ready(function () {
       const targetHref = $(this).attr("href");
       const targetSection = targetHref.split("html")[1];
       localStorage.setItem("menuLocation", targetSection);
-      location.assign("/works/shakeshack/menu.html");
+      location.assign("menu.html");
    });
 
    // menu.html에서 부드러운 스크롤링
